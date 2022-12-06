@@ -31,7 +31,9 @@ $$(document).on('page:init', '.page[data-name="page3"]', function () {
         alert("sorry your browser does not support this")
     }
 
-    var movebox = 0;
+    var moveboxOne = 0;
+    var moveboxTwo = 0;
+    var moveboxThree = 0;
 
     function handleMotion(event) {
         // console.log(event)
