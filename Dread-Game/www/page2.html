@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+            https://cordova.apache.org/docs/en/latest/
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <!-- GOOGLE FONTS has been added to the security policy -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline' fonts.googleapis.com; media-src *; img-src 'self' data: content:; font-src 'self' data: fonts.gstatic.com;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
+
+    <title>Current Characters Sheets</title>
+</head>
+
+<body>
+    
+    <div class="wrap"> 
+        <p class="dread-mini text-name-left">Name: Joyce</p> 
+        <p class="dread-mini text-name-right">Name: Malcom</p> 
+    </div>
+
+    <div class="wrap"> 
+        <p class="dread-mini text-name-left"> Status: <input id="StatusInput" type="button" value="Alive" class="button-design-status" /> </p> <!--switch button for dead and alive??-->
+        <p class="dread-mini text-name-right">Status: <input id="StatusInput1" type="button" value="Alive" class="button-design-status" /> </p> 
+    </div>
+
+    <div class="wrap"> 
+        <p class="dread-mini text-name-left center">Item: Sword</p> 
+        <p class="dread-mini text-name-right center">Item: Steel Bow</p> 
+    </div>
+
+    <div> 
+        <button id="takephoto"  class="dread-mini text-name-left photo-button">Take A Photo</button> 
+        <button id="takephoto1"  class="dread-mini text-name-right photo-button">Take A Photo</button>
+    </div>
+    
+    <div class="wrapper-top">
+
+        <!--replace the temp pictures with new photos-->
+        <img class="img-space" src="img/barba.jpg">
+        <img class="img-space1" src="img/barba.jpg">
+
+    </div>
+
+    <!--fix this one too-->
+    <a href="/www/page3.html">
+        <button class="button-wrapper button-design">Challenge!</button>
+        </a>
+
+    <div class="wrapper-bottom">
+
+        <img class="img-space2" src="img/barba.jpg">
+        <img class="img-space3" src="img/barba.jpg">
+
+    </div>
+
+    <div> 
+        <button id="takephoto2"  class="dread-mini text-name-left photo-button">Take A Photo</button> 
+        <button id="takephoto3" class="dread-mini text-name-right photo-button">Take A Photo</button>
+    </div>
+
+    <div class="wrap"> 
+        <p class="dread-mini text-name-left">Name: Erwin</p> 
+        <p class="dread-mini text-name-right center">Name: Thia</p> 
+    </div>
+
+    <div class="wrap"> 
+        <p class="dread-mini text-name-left">Status: <input id="StatusInput2" type="button" value="Alive" class="button-design-status" /> </p> 
+        <p class="dread-mini text-name-right center">Status: <input id="StatusInput3" type="button" value="Alive" class="button-design-status" /> </p> 
+    </div>
+
+    <div class="wrap"> 
+        <p class="dread-mini text-name-left">Item: Iron Axe  </p> 
+        <p class="dread-mini text-name-right center">Item: Medic Kit</p> 
+    </div>
+
+
+    <script src="cordova.js"></script>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

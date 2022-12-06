@@ -1,0 +1,192 @@
+/* add your own styles here */
+
+img {
+    max-width: 30%;
+    border: 2px solid;
+    border-color: white;
+}
+
+.wrapper-top {
+    height: 250px;
+    width: 400px;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.wrap {
+    display: flex;
+    align-items: flex-start;
+    margin-left: 5px;
+}
+
+.wrapper-bottom {
+    height: 250px;
+    width: 400px;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+.img-space {
+    margin-left: 0px;
+    margin-right: 20px;
+    
+}
+
+.img-space1 {
+  margin-left: 120px;
+  margin-right: 100px;
+  
+}
+
+.img-space2 {
+  margin-left: 0px;
+  margin-right: 20px;
+  
+}
+
+.img-space3 {
+  margin-left: 120px;
+  margin-right: 100px;
+  
+}
+
+.button-wrapper {
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.button-wrapper-title {
+  text-align: center;
+  margin-left: 120px;
+  margin-top: 50px;
+}
+
+
+.button-design {
+  background-color: #fbeee0;
+  border: 2px solid #832500;
+  border-radius: 30px;
+  box-shadow: #832500 4px 4px 0 0;
+  color: #832500;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 48px;
+  padding: 0 10px;
+  line-height: 70px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-design:hover {
+  background-color: rgb(0, 0, 0);
+}
+
+.button-design:active {
+  box-shadow: #b10000 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+.button-design-status {
+  background-color: #fbeee0;
+  border: 2px solid #832500;
+  border-radius: 30px;
+  box-shadow: #832500 4px 4px 0 0;
+  color: #832500;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 10px;
+  padding: 0 10px;
+  line-height: 15px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-design-status:hover {
+  background-color: rgb(0, 0, 0);
+}
+
+.button-design-status:active {
+  box-shadow: #b10000 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button-design {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+.text-name-left {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.text-name-right {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 180px;
+}
+
+.photo-button{
+  background-color: #ff004c;
+  border-radius: 8px;
+  color: #FFFFFF;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 20px;
+  padding: 4px 4px;
+  text-align: center;
+}
+
+.dread{
+  font-family: 'Nosifer', cursive;
+  text-align: center;
+}
+
+.dread-mini{
+  font-family: 'Nosifer', cursive;
+  text-align: center;
+  font-size: 8px;
+}
+
+.main-open{
+  margin-top: 250px;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(#ffffff, #000000);
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+  top: 50%;
+  margin-top: -100px;
+}
+
+.button-wrapper-3 {
+  text-align: center;
+  margin-left: 70px;
+  margin-right: 50px;
+}
+
+.dread-mini-3 {
+  font-family: 'Nosifer', cursive;
+  color: #ff004c;
+  text-align: center;
+  font-size: 12px;
+}
