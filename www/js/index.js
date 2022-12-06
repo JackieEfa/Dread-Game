@@ -39,7 +39,7 @@ $$(document).on('page:init', '.page[data-name="page3"]', function () {
         var x = event.beta;
         var y = event.gamma;
 
-
+// movement of ball 
         moveboxOne += x / 2
         moveboxTwo += y / 2
         moveboxThree += z /2 
