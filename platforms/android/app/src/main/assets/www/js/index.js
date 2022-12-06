@@ -1,73 +1,29 @@
+var app = new Framework7({
+  // App root element
+  el: '#app',
+  routes: [
+      {
+          path: '/',
+          url: 'index.html',
+      },
+      {
+          path: '/page2/',
+          url: 'page2.html',
+      },
+      {
+        path: '/page3/',
+        url: 'page3.html',
+    },
+  ],
+  // ... other parameters
+});
+
+var mainView = app.views.create('.view-main')
 
 
-document.addEventListener('deviceready', onDeviceReady, false);
+var $$ = Dom7;
 
-function onDeviceReady() {
-    // Cordova is now initialized. Have fun!
-
-    var options = {
-        quaility: 80, 
-        destinationType: Camera.DestinationType.FILE_URI
-    }
-
-    $("#takephoto").on("click", takepic); // for each photo section instead
-    $("#takephoto2").on("click", takepic);
-    $("#takephoto3").on("click", takepic);
-    $("#takephoto4").on("click", takepic);
-
-    function takepic() {
-        navigator.camera.getPicture(onSucess, onError, options);
-    }
-
-    function onSucess(imageData){ // may need to duplicate sucess functions for each image 
-        console.log(imageData);
-        resolveLocalFileSystemURL(imageData, function (fileEntry) {
-            var myNewImage = fileEntry.toURL()
-            console.log(myNewImage);
-            // do something with URL, assign to src or create an html 
-            $(".image-space").attr("src", myNewImage) // targeting the css image on all at the momment i think 
-        }, onError);
-    }
-
-    function onSucess(imageData){ // may need to duplicate sucess functions for each image 
-        console.log(imageData);
-        resolveLocalFileSystemURL(imageData, function (fileEntry) {
-            var myNewImage = fileEntry.toURL()
-            console.log(myNewImage);
-            // do something with URL, assign to src or create an html 
-            $(".image-space1").attr("src", myNewImage) // targeting the css image on all at the momment i think 
-        }, onError);
-    }
-
-    function onSucess(imageData){ // may need to duplicate sucess functions for each image 
-        console.log(imageData);
-        resolveLocalFileSystemURL(imageData, function (fileEntry) {
-            var myNewImage = fileEntry.toURL()
-            console.log(myNewImage);
-            // do something with URL, assign to src or create an html 
-            $(".image-space2").attr("src", myNewImage) // targeting the css image on all at the momment i think 
-        }, onError);
-    }
-
-    function onSucess(imageData){ // may need to duplicate sucess functions for each image 
-        console.log(imageData);
-        resolveLocalFileSystemURL(imageData, function (fileEntry) {
-            var myNewImage = fileEntry.toURL()
-            console.log(myNewImage);
-            // do something with URL, assign to src or create an html 
-            $(".image-space3").attr("src", myNewImage) // targeting the css image on all at the momment i think 
-        }, onError);
-    }
-
-    function onError(message){
-        alert("Photo Error Has Occured." + message)
-    }
-
-
-
-}
-
-function onDeviceReady() {
+$$(document).on('page:init', '.page[data-name="page3"]', function () { 
     // Cordova is now initialized. Have fun!
     if (window.DeviceOrientationEvent) {
         window.addEventListener("deviceorientation", handleMotion)
@@ -83,9 +39,6 @@ function onDeviceReady() {
         var x = event.beta;
         var y = event.gamma;
 
-        $("#z").text("z: " + z)
-        $("#x").text("x: " + x)
-        $("#y").text("y: " + y)
 
         movebox += x / 2
 
@@ -105,9 +58,12 @@ function onDeviceReady() {
     }
 
 
-}
+})
 
-document.getElementById("StatusInput").addEventListener(
+
+$$(document).on('page:init', '.page[data-name="page2"]', function () {
+
+  document.getElementById("StatusInput").addEventListener(
     "click",
     function(event) {
       if (event.target.value === "Alive") {
@@ -154,3 +110,81 @@ document.getElementById("StatusInput").addEventListener(
     },
     false
   );
+
+    // Cordova is now initialized. Have fun!
+
+    var options = {
+      quaility: 80, 
+      destinationType: Camera.DestinationType.FILE_URI
+  }
+
+  $("#takephoto").on("click", takepic); // for each photo section instead
+  $("#takephoto1").on("click", takepic1);
+  $("#takephoto2").on("click", takepic2);
+  $("#takephoto3").on("click", takepic3);
+
+  function takepic() {
+      navigator.camera.getPicture(onSucess, onError, options);
+  }
+
+  function takepic1() {
+    navigator.camera.getPicture(onSucess1, onError, options);
+}
+
+function takepic2() {
+  navigator.camera.getPicture(onSucess2, onError, options);
+}
+
+function takepic3() {
+  navigator.camera.getPicture(onSucess3, onError, options);
+}
+
+  function onSucess(imageData){ // may need to duplicate sucess functions for each image 
+      console.log(imageData);
+      resolveLocalFileSystemURL(imageData, function (fileEntry) {
+          var myNewImage = fileEntry.toURL()
+          console.log(myNewImage);
+          // do something with URL, assign to src or create an html 
+          $(".img-space").attr("src", myNewImage) // targeting the css image on all at the momment i think 
+      }, onError);
+  }
+
+  function onSucess1(imageData){ // may need to duplicate sucess functions for each image 
+      console.log(imageData);
+      resolveLocalFileSystemURL(imageData, function (fileEntry) {
+          var myNewImage = fileEntry.toURL()
+          console.log(myNewImage);
+          // do something with URL, assign to src or create an html 
+          $(".img-space1").attr("src", myNewImage) // targeting the css image on all at the momment i think 
+      }, onError);
+  }
+
+  function onSucess2(imageData){ // may need to duplicate sucess functions for each image 
+      console.log(imageData);
+      resolveLocalFileSystemURL(imageData, function (fileEntry) {
+          var myNewImage = fileEntry.toURL()
+          console.log(myNewImage);
+          // do something with URL, assign to src or create an html 
+          $(".img-space2").attr("src", myNewImage) // targeting the css image on all at the momment i think 
+      }, onError);
+  }
+
+  function onSucess3(imageData){ // may need to duplicate sucess functions for each image 
+      console.log(imageData);
+      resolveLocalFileSystemURL(imageData, function (fileEntry) {
+          var myNewImage = fileEntry.toURL()
+          console.log(myNewImage);
+          // do something with URL, assign to src or create an html 
+          $(".img-space3").attr("src", myNewImage) // targeting the css image on all at the momment i think 
+      }, onError);
+  }
+
+  function onError(message){
+      alert("Photo Error Has Occured." + message)
+  }
+
+
+
+
+})
+

@@ -38,6 +38,7 @@
     <meta name="color-scheme" content="light dark">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="css/framework7-bundle.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
 
@@ -46,18 +47,33 @@
 
 <body>
 
+    <div id="app">
+        <!-- panel components go here -->
+
+        <div class="view view-main">
+            <!-- component will apply to all pages in view -->
+
+            <div data-name="home" class="page">
+
+            <div class="page-content">
+
     <div class="main-open">
     <h1 class="dread">Dread</h1>
     <p class="dread">For Narrator & Players</p>
 
     <!--fix html direction page idk why it wont work-->
-    <a href="/www/page2.html">
+    <a href="/page2/">
      <button class="button-wrapper-title button-design"> Play! </button>
-     </a>
+    </a>
 
+                </div>
+            </div>
+        </div>
     </div>
+</div>
 
     <script src="cordova.js"></script>
+    <script src="js/framework7-bundle.min.js"></script>
     <script src="js/jquery-3.6.1.min.js"></script>
     <script src="js/index.js"></script>
 </body>
