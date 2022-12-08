@@ -31,7 +31,9 @@ $$(document).on('page:init', '.page[data-name="page3"]', function () {
         alert("sorry your browser does not support this")
     }
 
-    var movebox = 0;
+    var moveboxOne = 0;
+    var moveboxTwo = 0;
+    var moveboxThree = 0;
 
     function handleMotion(event) {
         // console.log(event)
@@ -39,10 +41,12 @@ $$(document).on('page:init', '.page[data-name="page3"]', function () {
         var x = event.beta;
         var y = event.gamma;
 
+// movement of ball 
+        moveboxOne += x / 2
+        moveboxTwo += y / 2
+        moveboxThree += z /2 
 
-        movebox += x / 2
-
-        $(".box").css("transform", "rotateZ(" + z + "deg) rotateX(" + x + "deg) rotateY(" + y + "deg) translateY(" + movebox + "px)")
+        $(".box").css("transform", "translateZ(" + moveboxThree + "px) translateX(" + moveboxOne + "px) translateY(" + moveboxTwo + "px)")
 
         Number.prototype.map = function (in_min, in_max, out_min, out_max) {
             return (this - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
